@@ -1,6 +1,6 @@
 var Voting = artifacts.require("./Voting.sol");
 module.exports = function(deployer) {
-  deployer.deploy(Voting, ['Josip', 'Zvone', 'Marko','Miro'], {gas: 6700000});
+  deployer.deploy(Voting, ['Josip', 'Zvone', 'Marko','Miro'], {gas: 700000});
 };
 /* The deployer expects the first argument to be the name of the contract 
 followed by constructor arguments. In our case, there is only one argument 
