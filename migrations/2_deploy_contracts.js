@@ -1,8 +1,10 @@
-var ConvertLib = artifacts.require("./ConvertLib.sol");
-var MetaCoin = artifacts.require("./MetaCoin.sol");
-
+var Voting = artifacts.require("./Voting.sol");
 module.exports = function(deployer) {
-  deployer.deploy(ConvertLib);
-  deployer.link(ConvertLib, MetaCoin);
-  deployer.deploy(MetaCoin);
+  deployer.deploy(Voting, ['Josip', 'Zvone', 'Marko','Miro'], {gas: 6700000});
 };
+/* The deployer expects the first argument to be the name of the contract 
+followed by constructor arguments. In our case, there is only one argument 
+which is an array ofcandidates. The third argument is a hash where we 
+specify the gas required to deploy our code. The gas amount varies depending 
+on the size of your contract. For the Voting contract, 290000 was sufficient.
+*/
